@@ -22,11 +22,6 @@ $user_id_result = $con->query($user_id);
 $user_id = $user_id_result->fetch_array();
 
  
- 
-
-
-
-
  if ($user_type==2){
 
     $Sql_Query = "INSERT INTO orders (user_id,product_id,quantity,total_price) SELECT user_id,product_id,quantity,total_price FROM CART WHERE user_id= '$user_id[0]'" ;
